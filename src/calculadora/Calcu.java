@@ -31,12 +31,12 @@ public class Calcu {
 	JButton B_D;
 	JButton B_c;
 
-	public String acum = "";// VARIABLE QUE ACUMULA EL VALOR DIJITADO
-	public double a; // VARIABLE QUE ALMACENA EL PRIMER VALOR DIJITADO
+	public String acum = "";// ACUMULA EL VALOR DIGITADO
+	public double a; // ALMACENA EL PRIMER VALOR DIGITADO
 
-	public double op;// VARIABLE QUE ALMACENA EL VALOR DIGITADO Y REALIZA LA OPERACION SEGUN EL
+	public double op;// ALMACENA EL VALOR DIGITADO Y REALIZA LA OPERACION SEGUN EL
 						// SIGNO.
-	public String c = "";// AQUI GUARDAMOS EL SIGNO DE LA OPERACION PARA LUEGO SER LLAMADO EN LA
+	public String c = "";// GUARDAMOS EL SIGNO DE LA OPERACION PARA LUEGO SER LLAMADO EN LA
 							// CONDICION
 
 	public static void main(String arg[]) { // METODO PRINCIPAL
@@ -49,17 +49,17 @@ public class Calcu {
 	public Calcu() {
 
 		// 1. CREAMOS EL FRAME
-		frame = new JFrame("Calculadora");// ESTE ES EL NOBRE DE FRAME EL QUE SE UBICA EN LA PARTE DE ARRIBA DEL
-											// FORMULARIO
+		frame = new JFrame("Calculadora");// NOMBRE DE FRAME EL QUE SE UBICA EN LA PARTE DE ARRIBA DEL
+								// FORMULARIO
 
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		mp = new JPanel(new GridLayout(4, 5));// GRILLAS COLUMNAS Y FILAS DEL FORMULARIO
+		mp = new JPanel(new GridLayout(4, 5));// COLUMNAS Y FILAS DEL FORMULARIO
 		mp1 = new JPanel(new GridLayout(1, 1));// SE CREA UN SEGUNDO PANEL PARA LA CAJA DE TEXTO
 
-		// CUADROS DE TEXTO CON TAMAÑO
+		// CUADROS DE TEXTO CON TAMAÃ‘O
 		Mostrar = new JTextField();// NO TIENE DIMENCION
 
-		// INICIALISAMOS BOTONES
+		// INICIALIZAMOS BOTONES
 
 		B_1 = new JButton("1");// ESTOS SON LOS NOMBRES DE LOS BOTONES
 		B_2 = new JButton("2");
@@ -78,10 +78,10 @@ public class Calcu {
 		B_I = new JButton("=");
 		B_D = new JButton("/");
 
-		// ADCIONAMOS LOS BOTONES EL PANEL
+		// ANADIMOS LOS BOTONES EL PANEL
 
-		mp1.add(Mostrar);// ADICIONA EL PANEL QUE TIENE LA CAJA DE TEXTO MP1
-		mp.add(B_1);// ADICIONAMOS LOS BOTONES EL PANEL MP EN ORDEN DE LA CALCULADORA
+		mp1.add(Mostrar);// ANADE EL PANEL QUE TIENE LA CAJA DE TEXTO MP1
+		mp.add(B_1);// ANADIMOS LOS BOTONES EL PANEL MP EN ORDEN DE LA CALCULADORA
 		mp.add(B_2);
 		mp.add(B_3);
 		mp.add(B_S);
@@ -99,8 +99,8 @@ public class Calcu {
 		mp.add(B_D);
 
 		// LLAMAR AL PANEL
-		frame.getContentPane().add(mp1, BorderLayout.CENTER);// ADICION DEL SEGUNDO PANEL EN EL FRAME O FORMULARIO
-		frame.getContentPane().add(mp, BorderLayout.SOUTH);// ADICION DEL PRIMER PANEL EN EL FRAME O FORMULARIO
+		frame.getContentPane().add(mp1, BorderLayout.CENTER);// SEGUNDO PANEL EN EL FRAME O FORMULARIO
+		frame.getContentPane().add(mp, BorderLayout.SOUTH);// PRIMER PANEL EN EL FRAME O FORMULARIO
 
 		// ACCIONES PARA LOS BOTONES NUMERICOS
 		B_1.addActionListener(new ActionListener() {
@@ -244,11 +244,11 @@ public class Calcu {
 
 		});
 
-		// DIMENCIONES DEL JFRAME
-		frame.setSize(200, 300);// TAMAÑO EL FORMULARIO O FRAME
+		// DIMENSIONES DEL JFRAME
+		frame.setSize(200, 300);// TAMANO EL FORMULARIO O FRAME
 		frame.setResizable(false);// FRAME ESTATICO
 		frame.setLocationRelativeTo(frame.getParent());
-		frame.setVisible(true);// PERMITE QUE EL FORMULARIO SE VISIBLE
+		frame.setVisible(true);// PERMITE QUE EL FORMULARIO SEA VISIBLE
 
 	}// fin del contructor
 
